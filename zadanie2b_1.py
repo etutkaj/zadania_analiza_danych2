@@ -13,10 +13,7 @@ def fill_missing_values():
     # Wypełnienie brakujących (NaN) wartości danymi z poprzedniego znacznika czasowego
     fixed_data = data.bfill()
     # Zapis do pliku
-    options = {}
-    options['strings_to_formulas'] = False
-    options['strings_to_urls'] = False
-    writer = pd.ExcelWriter(filename, engine='openpyxl', options=options)
+    writer = pd.ExcelWriter(filename, engine='openpyxl')
     fixed_data.to_excel(excel_writer=writer, index=False)
     writer.save()
 

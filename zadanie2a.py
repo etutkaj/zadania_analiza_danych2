@@ -1,9 +1,7 @@
 import numpy as np
 from scipy.stats import beta
 import pandas as pd
-import seaborn as sns
 import matplotlib.pyplot as plt
-from json import dumps
 
 size = 100       # liczebność zbioru
 a = 3.2          # alfa
